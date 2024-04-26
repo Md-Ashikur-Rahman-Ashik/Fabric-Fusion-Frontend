@@ -128,7 +128,7 @@ const Navbar = () => {
             </Link>
           </div>
         ) : (
-          <Link to="/login" className="btn text-pink-600 mb-2 mt-2">
+          <Link to="/login" className="btn font-bold text-pink-600 mb-2 mt-2">
             Login
           </Link>
         )}

@@ -6,6 +6,7 @@ import MyArtCraftList from "../components/MyArtCraftList/MyArtCraftList";
 import Register from "../components/Register/Register";
 import Root from "../components/Root/Root";
 import { createBrowserRouter } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -22,11 +23,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/add-craft-item",
-        element: <AddCraftItem></AddCraftItem>,
+        element: (
+          <PrivateRoute>
+            <AddCraftItem></AddCraftItem>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-art-craft-list",
-        element: <MyArtCraftList></MyArtCraftList>,
+        element: (
+          <PrivateRoute>
+            <MyArtCraftList></MyArtCraftList>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/register",
