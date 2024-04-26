@@ -5,16 +5,16 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Navbar = () => {
   const { signOutUser, user, loading } = useContext(AuthContext);
 
-  //   if (loading) {
-  //     return (
-  //       <div>
-  //         <span className="loading loading-bars loading-xs"></span>
-  //         <span className="loading loading-bars loading-sm"></span>
-  //         <span className="loading loading-bars loading-md"></span>
-  //         <span className="loading loading-bars loading-lg"></span>
-  //       </div>
-  //     );
-  //   }
+  if (loading) {
+    return (
+      <div>
+        <span className="loading loading-bars loading-xs"></span>
+        <span className="loading loading-bars loading-sm"></span>
+        <span className="loading loading-bars loading-md"></span>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
 
   const handleSignOut = () => {
     signOutUser();
@@ -51,13 +51,6 @@ const Navbar = () => {
           Register
         </NavLink>
       </li>
-      {user && (
-        <li>
-          <NavLink className="text-pink-600 font-bold" to="/blog">
-            Blog
-          </NavLink>
-        </li>
-      )}
     </>
   );
 
@@ -123,7 +116,10 @@ const Navbar = () => {
               src={user.photoURL}
               alt=""
             />
-            <Link className="btn font-bold text-pink-600 mb-2 mt-2" onClick={handleSignOut}>
+            <Link
+              className="btn font-bold text-pink-600 mb-2 mt-2"
+              onClick={handleSignOut}
+            >
               LogOut
             </Link>
           </div>
