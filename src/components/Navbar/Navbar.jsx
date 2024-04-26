@@ -123,7 +123,7 @@ const Navbar = () => {
               src={user.photoURL}
               alt=""
             />
-            <Link className="btn" onClick={handleSignOut}>
+            <Link className="btn font-bold text-pink-600 mb-2 mt-2" onClick={handleSignOut}>
               LogOut
             </Link>
           </div>
