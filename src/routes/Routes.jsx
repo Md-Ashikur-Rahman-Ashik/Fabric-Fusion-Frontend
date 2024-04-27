@@ -26,11 +26,17 @@ export const router = createBrowserRouter([
         path: "/home-craft/:id",
         element: <HomeCraftDetails></HomeCraftDetails>,
         loader: ({ params }) =>
-          fetch(`https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app//crafts/${params.id}`),
+          fetch(
+            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${params.id}`
+          ),
       },
       {
         path: "/all-art-craft",
         element: <AllArtCraft></AllArtCraft>,
+        loader: () =>
+          fetch(
+            "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts"
+          ),
       },
       {
         path: "/add-craft-item",

@@ -46,11 +46,13 @@ const Navbar = () => {
           </NavLink>
         </li>
       )}
-      <li>
-        <NavLink className="text-pink-600 font-bold" to="/register">
-          Register
-        </NavLink>
-      </li>
+      {!user && (
+        <li>
+          <NavLink className="text-pink-600 font-bold" to="/register">
+            Register
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
