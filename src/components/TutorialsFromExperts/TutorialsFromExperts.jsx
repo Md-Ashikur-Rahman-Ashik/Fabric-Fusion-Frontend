@@ -29,8 +29,7 @@ const TutorialsFromExperts = () => {
                 with embroidery.
               </p>
               <a
-                href="/"
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
               >
                 Read More
               </a>
@@ -53,8 +52,7 @@ const TutorialsFromExperts = () => {
                 cozy projects.
               </p>
               <a
-                href="/"
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
               >
                 Read More
               </a>
@@ -76,8 +74,7 @@ const TutorialsFromExperts = () => {
                 stunning quilts.
               </p>
               <a
-                href="/"
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
               >
                 Read More
               </a>

@@ -24,7 +24,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/crafts/:id",
-        element: <HomeCraftDetails></HomeCraftDetails>,
+        element: (
+          <PrivateRoute>
+            <HomeCraftDetails></HomeCraftDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${params.id}`

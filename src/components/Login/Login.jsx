@@ -2,13 +2,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { user, logInUser, googleUser, githubUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,9 +24,11 @@ const Login = () => {
         toast("User Login Successful");
 
         // Navigate after login
-        // navigate(location.state ? location.state : "/");
+        navigate(location.state ? location.state : "/");
       })
       .catch(() => toast("User Login Failed"));
+
+    form.reset();
   };
 
   const handleGithubUser = () => {
@@ -33,7 +37,7 @@ const Login = () => {
         toast("Login with Github account successful");
 
         // Navigate after login
-        // navigate(location.state ? location.state : "/");
+        navigate(location.state ? location.state : "/");
       })
       .catch(() => toast("User Login Failed"));
   };
@@ -44,7 +48,7 @@ const Login = () => {
         toast("Login with Google account successful");
 
         // Navigate after login
-        // navigate(location.state ? location.state : "/");
+        navigate(location.state ? location.state : "/");
       })
       .catch(() => {
         user && toast("User Login Failed");

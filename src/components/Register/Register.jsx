@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { user, registerUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,6 +35,8 @@ const Register = () => {
         updateProfile(result.user, {
           photoURL: photo,
         });
+        form.reset();
+        navigate("/");
       })
       .catch(() => {
         toast("User Registration Failed");
