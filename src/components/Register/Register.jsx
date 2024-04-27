@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { user, registerUser, setLoading } = useContext(AuthContext);
+  const { user, registerUser } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -43,11 +43,11 @@ const Register = () => {
   return (
     <div className="hero py-4 md:py-4 lg:py-0 lg:min-h-screen bg-pink-50">
       <Helmet>
-        <title>Fabric Fusion | Login</title>
+        <title>Fabric Fusion | Register</title>
       </Helmet>
       <ToastContainer></ToastContainer>
       <form onSubmit={handleSubmit}>
-        <h2 className="text-4xl font-bold animate__animated animate__bounce text-pink-600 text-center">
+        <h2 className="text-4xl font-bold text-pink-600 text-center">
           Please Register
         </h2>
         <div className="form-control">

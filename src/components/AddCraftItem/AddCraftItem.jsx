@@ -31,16 +31,17 @@ const AddCraftItem = () => {
       userName,
     };
 
-    console.log(newCraft);
-
     // Send data to the server
-    fetch("http://localhost:5000/crafts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newCraft),
-    })
+    fetch(
+      "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newCraft),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -51,12 +52,19 @@ const AddCraftItem = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+        } else {
+          Swal.fire({
+            title: "Error!",
+            text: "Adding Craft Item failed",
+            icon: "error",
+            confirmButtonText: "Exit",
+          });
         }
       });
   };
 
   return (
-    <div className="bg-pink-50 text-black p-24">
+    <div className="bg-pink-50 text-black p-10 md:p-24">
       <h2 className="text-3xl font-extrabold text-pink-600 text-center">
         Add A Craft Item
       </h2>
@@ -71,7 +79,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="name"
-                id=""
+                required
                 placeholder="Item Name"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -85,7 +93,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="photo"
-                id=""
+                required
                 placeholder="Image URL"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -117,7 +125,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="shortDescription"
-                id=""
+                required
                 placeholder="Short Description"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -131,7 +139,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="price"
-                id=""
+                required
                 placeholder="Price"
                 className="flex py-2 flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -148,7 +156,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="rating"
-                id=""
+                required
                 placeholder="Rating"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -178,7 +186,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="processingTime"
-                id=""
+                required
                 placeholder="Processing Time"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -205,7 +213,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="email"
-                id=""
+                required
                 placeholder="User Email"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
@@ -219,7 +227,7 @@ const AddCraftItem = () => {
               <input
                 type="text"
                 name="userName"
-                id=""
+                required
                 placeholder="User Name"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
