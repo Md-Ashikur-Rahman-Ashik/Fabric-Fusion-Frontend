@@ -57,9 +57,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-[calc(100vw-10)] flex justify-center lg:gap-20 gap-2 items-center bg-base-100">
+    <div className="w-[calc(100vw-10)] flex justify-center lg:gap-20 gap-2 items-center bg-base-100 z-50">
       <div className="">
-        <div className="dropdown">
+        <div className="dropdown z-50">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"

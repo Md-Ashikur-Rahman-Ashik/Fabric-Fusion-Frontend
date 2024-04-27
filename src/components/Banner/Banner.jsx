@@ -53,7 +53,7 @@ const Banner = () => {
         <SwiperSlide>
           <div>
             <img
-              className="w-2/3 md:w-2/3 lg:w-1/2 mx-auto rounded-xl relative"
+              className="w-2/3 md:w-1/2 mx-auto rounded-xl relative"
               src="https://i.ibb.co/qpm53Vd/third-Banner-Img.jpg"
               alt=""
             />

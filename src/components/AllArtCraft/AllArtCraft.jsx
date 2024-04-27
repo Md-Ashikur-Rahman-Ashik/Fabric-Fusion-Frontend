@@ -4,7 +4,7 @@ const AllArtCraft = () => {
   const allCrafts = useLoaderData();
 
   return (
-    <div className="overflow-x-auto mx-10">
+    <div className="mx-4 md:mx-10">
       <table className="table">
         {/* head */}
         <thead>
@@ -19,7 +19,7 @@ const AllArtCraft = () => {
           {allCrafts.map((craft) => (
             <tr key={craft._id}>
               <td>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 md:gap-3">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
