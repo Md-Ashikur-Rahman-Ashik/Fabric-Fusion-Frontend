@@ -35,11 +35,11 @@ export const router = createBrowserRouter([
           ),
       },
       {
-        path: "/all-art-craft",
+        path: "/all-art-craft/",
         element: <AllArtCraft></AllArtCraft>,
         loader: () =>
           fetch(
-            "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts"
+            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts`
           ),
       },
       {
@@ -51,12 +51,16 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "/my-art-craft-list",
+        path: "/my-art-craft-list/:email",
         element: (
           <PrivateRoute>
             <MyArtCraftList></MyArtCraftList>
           </PrivateRoute>
         ),
+        loader: () =>
+          fetch(
+            "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts"
+          ),
       },
       {
         path: "/register",
