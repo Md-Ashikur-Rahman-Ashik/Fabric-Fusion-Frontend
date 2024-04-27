@@ -12,7 +12,7 @@ const HomeCraft = ({ craft }) => {
         <h2 className="card-title text-pink-600">{name}</h2>
         <p>{shortDescription}</p>
         <div className="">
-          <Link to={`/home-craft/${_id}`}>
+          <Link to={`/crafts/${_id}`}>
             <button className="btn bg-pink-100 w-full">View Details</button>
           </Link>
         </div>

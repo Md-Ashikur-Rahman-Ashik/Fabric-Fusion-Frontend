@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
           ),
       },
       {
-        path: "/home-craft/:id",
+        path: "/crafts/:id",
         element: <HomeCraftDetails></HomeCraftDetails>,
         loader: ({ params }) =>
           fetch(
