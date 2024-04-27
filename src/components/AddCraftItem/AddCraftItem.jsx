@@ -6,6 +6,7 @@ const AddCraftItem = () => {
 
     const form = event.target;
     const name = form.name.value;
+    const photo = form.photo.value;
     const subcategoryBox = document.getElementById("subcategory").value;
     const shortDescription = form.shortDescription.value;
     const price = form.price.value;
@@ -16,8 +17,9 @@ const AddCraftItem = () => {
     const email = form.email.value;
     const userName = form.userName.value;
 
-    const newCoffee = {
+    const newCraft = {
       name,
+      photo,
       subcategoryBox,
       shortDescription,
       price,
@@ -29,7 +31,28 @@ const AddCraftItem = () => {
       userName,
     };
 
-    console.log(newCoffee);
+    console.log(newCraft);
+
+    // Send data to the server
+    fetch("http://localhost:5000/crafts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newCraft),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Craft Item Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
 
   return (
@@ -41,10 +64,7 @@ const AddCraftItem = () => {
         {/* Form Name and Quantity Row */}
         <div className="md:flex flex-col items-center gap-4 mt-2">
           <div className="md:w-1/2">
-            <label
-              htmlFor="url"
-              className="block mb-1 text-sm font-medium text-pink-600"
-            >
+            <label className="block mb-1 text-sm font-medium text-pink-600">
               Item Name
             </label>
             <div className="flex">
@@ -53,6 +73,20 @@ const AddCraftItem = () => {
                 name="name"
                 id=""
                 placeholder="Item Name"
+                className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
+              />
+            </div>
+          </div>
+          <div className="md:w-1/2">
+            <label className="block mb-1 text-sm font-medium text-pink-600">
+              Image URL
+            </label>
+            <div className="flex">
+              <input
+                type="text"
+                name="photo"
+                id=""
+                placeholder="Image URL"
                 className="flex py-2 w-full flex-1 border sm:text-sm rounded-r-md focus:ring-inset border-gray-300 px-2 text-black bg-white focus:ring-violet-400"
               />
             </div>
@@ -76,10 +110,7 @@ const AddCraftItem = () => {
         {/* Form Supplier and Taste Row */}
         <div className="md:flex flex-col items-center gap-4 mt-2">
           <div className="md:w-1/2">
-            <label
-              htmlFor="url"
-              className="block mb-1 text-sm font-medium text-pink-600"
-            >
+            <label className="block mb-1 text-sm font-medium text-pink-600">
               Short Description
             </label>
             <div className="flex">
@@ -93,10 +124,7 @@ const AddCraftItem = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <label
-              htmlFor="url"
-              className="block mb-1 text-sm font-medium text-pink-600"
-            >
+            <label className="block mb-1 text-sm font-medium text-pink-600">
               Price
             </label>
             <div className="flex">
@@ -113,10 +141,7 @@ const AddCraftItem = () => {
         {/* Form Category and Details Row */}
         <div className="md:flex flex-col items-center gap-4 mt-2">
           <div className="md:w-1/2">
-            <label
-              htmlFor="url"
-              className="block mb-1 text-sm font-medium text-pink-600"
-            >
+            <label className="block mb-1 text-sm font-medium text-pink-600">
               Rating
             </label>
             <div className="flex">
@@ -146,10 +171,7 @@ const AddCraftItem = () => {
         {/* Form Photo Row */}
         <div className="mt-2">
           <div className="md:w-1/2 mx-auto">
-            <label
-              htmlFor="url"
-              className="block mb-1 text-sm font-medium text-pink-600"
-            >
+            <label className="block mb-1 text-sm font-medium text-pink-600">
               Processing Time
             </label>
             <div className="flex">

@@ -7,6 +7,7 @@ import Register from "../components/Register/Register";
 import Root from "../components/Root/Root";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
+import HomeCraftDetails from "../components/HomeCraftDetails/HomeCraftDetails";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/crafts"),
+      },
+      {
+        path: "/home-craft/:id",
+        element: <HomeCraftDetails></HomeCraftDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`),
       },
       {
         path: "/all-art-craft",
