@@ -1,6 +1,6 @@
 const InspirationGallery = () => {
   return (
-    <section className="py-12 bg-pink-50 mx-10 mt-10 rounded-xl">
+    <section className="py-12 bg-pink-50 mx-4 md:mx-10 mt-10 rounded-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-pink-600 sm:text-4xl">
