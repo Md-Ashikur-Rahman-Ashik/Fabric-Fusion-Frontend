@@ -16,11 +16,11 @@ const InspirationGallery = () => {
           <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
             <img
               className="h-64 w-full object-cover"
-              src="gallery-image1.jpg"
+              src="https://i.ibb.co/HxZBKyr/first-Gallery.png"
               alt="Gallery Item 1"
             />
             <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-pink-600">
                 Embroidered Artwork
               </h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -29,6 +29,38 @@ const InspirationGallery = () => {
             </div>
           </div>
           {/* Repeat this block for each gallery item */}
+          {/* Gallery Item 2 */}
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
+            <img
+              className="h-64 w-full object-cover"
+              src="https://i.ibb.co/PMW5bsb/second-Gallery.png"
+              alt="Gallery Item 2"
+            />
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-pink-600">
+                Knitted Creations
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                Cozy and stylish knitted garments and accessories.
+              </p>
+            </div>
+          </div>
+          {/* Gallery Item 3 */}
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
+            <img
+              className="h-64 w-full object-cover"
+              src="https://i.ibb.co/HHntpzN/third-Gallery.png"
+              alt="Gallery Item 3"
+            />
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-pink-600">
+                Quilted Masterpieces
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                Intricate and beautiful quilts crafted with precision and care.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

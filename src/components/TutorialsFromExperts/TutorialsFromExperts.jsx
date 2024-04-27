@@ -21,7 +21,7 @@ const TutorialsFromExperts = () => {
               alt="Tutorial"
             />
             <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-pink-600">
                 Embroidery Basics
               </h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -30,7 +30,7 @@ const TutorialsFromExperts = () => {
               </p>
               <a
                 href="/"
-                className="mt-4 block text-base font-medium text-blue-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
               >
                 Read More
               </a>
@@ -45,7 +45,7 @@ const TutorialsFromExperts = () => {
               alt="Tutorial 2"
             />
             <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-pink-600">
                 Knitting Essentials
               </h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -54,7 +54,7 @@ const TutorialsFromExperts = () => {
               </p>
               <a
                 href="/"
-                className="mt-4 block text-base font-medium text-blue-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
               >
                 Read More
               </a>
@@ -68,7 +68,7 @@ const TutorialsFromExperts = () => {
               alt="Tutorial 3"
             />
             <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-pink-600">
                 Quilting Techniques
               </h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -77,7 +77,7 @@ const TutorialsFromExperts = () => {
               </p>
               <a
                 href="/"
-                className="mt-4 block text-base font-medium text-blue-600 hover:text-blue-500"
+                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500"
               >
                 Read More
               </a>
