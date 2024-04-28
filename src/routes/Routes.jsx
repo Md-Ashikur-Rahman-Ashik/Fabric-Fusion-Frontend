@@ -9,11 +9,13 @@ import { createBrowserRouter } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import HomeCraftDetails from "../components/HomeCraftDetails/HomeCraftDetails";
 import UpdateCraft from "../components/UpdateCraft/UpdateCraft";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
