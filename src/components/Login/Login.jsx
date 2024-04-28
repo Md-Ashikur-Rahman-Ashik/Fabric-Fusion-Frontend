@@ -8,7 +8,8 @@ import { FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
-  const { user, logInUser, googleUser, githubUser } = useContext(AuthContext);
+  const { user, logInUser, googleUser, githubUser, setLoading } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,7 +27,10 @@ const Login = () => {
         // Navigate after login
         navigate(location.state ? location.state : "/");
       })
-      .catch(() => toast("User Login Failed"));
+      .catch(() => {
+        toast("User Login Failed");
+        setLoading(false);
+      });
 
     form.reset();
   };
