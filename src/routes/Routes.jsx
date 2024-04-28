@@ -8,6 +8,7 @@ import Root from "../components/Root/Root";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import HomeCraftDetails from "../components/HomeCraftDetails/HomeCraftDetails";
+import UpdateCraft from "../components/UpdateCraft/UpdateCraft";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/crafts"),
+        loader: () =>
+          fetch(
+            "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts"
+          ),
       },
       {
         path: "/crafts/:id",
@@ -34,7 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/all-art-craft/",
         element: <AllArtCraft></AllArtCraft>,
-        loader: () => fetch(`http://localhost:5000/crafts`),
+        loader: () =>
+          fetch(
+            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts`
+          ),
       },
       {
         path: "/add-craft-item",
@@ -63,6 +70,18 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/update-craft/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateCraft></UpdateCraft>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${params.id}`
+          ),
       },
     ],
   },

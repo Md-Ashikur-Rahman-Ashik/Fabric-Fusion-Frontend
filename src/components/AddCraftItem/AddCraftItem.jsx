@@ -32,13 +32,16 @@ const AddCraftItem = () => {
     };
 
     // Send data to the server
-    fetch("http://localhost:5000/crafts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newCraft),
-    })
+    fetch(
+      "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newCraft),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

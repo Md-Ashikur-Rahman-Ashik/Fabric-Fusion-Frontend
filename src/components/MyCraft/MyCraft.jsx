@@ -35,13 +35,15 @@ const MyCraft = ({ craft }) => {
           <span className="text-pink-600"> {available}</span>
         </p>
         <div className="">
-          <Link to={`/crafts/${_id}`}>
+          <Link to={`/update-craft/${_id}`}>
             <button className="btn mt-2 bg-pink-100 w-full">Update</button>
           </Link>
         </div>
         <div className="">
           <Link to={`/crafts/${_id}`}>
-            <button className="btn mt-2 bg-pink-100 text-pink-600 w-full">Delete</button>
+            <button className="btn mt-2 bg-pink-100 text-pink-600 w-full">
+              Delete
+            </button>
           </Link>
         </div>
       </div>
