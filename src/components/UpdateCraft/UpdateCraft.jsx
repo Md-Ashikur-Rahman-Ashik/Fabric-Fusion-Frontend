@@ -8,6 +8,7 @@ const UpdateCraft = () => {
   const handleClicked = () => {
     setClicked(true);
   };
+
   const {
     name,
     photo,
@@ -54,16 +55,13 @@ const UpdateCraft = () => {
     };
 
     // Send data to the server
-    fetch(
-      `http://localhost:5000/craft/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedCraft),
-      }
-    )
+    fetch(`http://localhost:5000/craft/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedCraft),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

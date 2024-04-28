@@ -28,9 +28,7 @@ const TutorialsFromExperts = () => {
                 Learn the fundamental stitches and techniques to get started
                 with embroidery.
               </p>
-              <a
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
-              >
+              <a className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default">
                 Read More
               </a>
             </div>
@@ -51,9 +49,7 @@ const TutorialsFromExperts = () => {
                 Master the basic knitting techniques and start creating your own
                 cozy projects.
               </p>
-              <a
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
-              >
+              <a className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default">
                 Read More
               </a>
             </div>
@@ -73,9 +69,7 @@ const TutorialsFromExperts = () => {
                 Explore different quilting patterns and methods to create
                 stunning quilts.
               </p>
-              <a
-                className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default"
-              >
+              <a className="mt-4 block text-base font-medium text-pink-600 hover:text-blue-500 cursor-default">
                 Read More
               </a>
             </div>
