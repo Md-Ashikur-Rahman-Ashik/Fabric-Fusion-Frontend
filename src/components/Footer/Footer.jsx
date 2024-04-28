@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
     <footer className="footer mt-10 footer-center p-10 bg-pink-50 text-base-content rounded">
-      <nav className="grid grid-flow-col gap-4">
+      <div className="grid grid-flow-col gap-4">
         <a className="link link-hover font-bold">Contact us at : admin@fabricfusion.com</a>
-      </nav>
-      <nav>
+      </div>
+      <div>
         <div className="grid grid-flow-col gap-4">
           <a>
             <svg
@@ -40,7 +40,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-      </nav>
+      </div>
       <aside>
         <p>
           Copyright © 2024 - All right reserved by{" "}
