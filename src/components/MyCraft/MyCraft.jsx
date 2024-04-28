@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyCraft = ({ craft }) => {
   const {
@@ -12,6 +13,34 @@ const MyCraft = ({ craft }) => {
     available,
   } = craft;
 
+  const handleDelete = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/craft/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Craft has been deleted.",
+                icon: "success",
+              });
+            }
+          });
+      }
+    });
+  };
+
   return (
     <div className="card  bg-base-100 shadow-xl">
       <figure>
@@ -21,7 +50,7 @@ const MyCraft = ({ craft }) => {
         <h2 className="font-bold text-xl text-pink-600">{name}</h2>
         <p className="font-bold">{shortDescription}</p>
         <p className="font-bold">
-          Price: <span className="text-pink-600">{price}</span>
+          Price: <span className="text-pink-600">{price} BDT</span>
         </p>
         <p className="font-bold">
           Rating: <span className="text-pink-600">{rating}</span>
@@ -39,12 +68,15 @@ const MyCraft = ({ craft }) => {
             <button className="btn mt-2 bg-pink-100 w-full">Update</button>
           </Link>
         </div>
-        <div className="">
-          <Link to={`/crafts/${_id}`}>
-            <button className="btn mt-2 bg-pink-100 text-pink-600 w-full">
-              Delete
-            </button>
-          </Link>
+        <div>
+          <button
+            onClick={() => {
+              handleDelete(_id);
+            }}
+            className="btn mt-2 bg-pink-100 text-pink-600 w-full"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>

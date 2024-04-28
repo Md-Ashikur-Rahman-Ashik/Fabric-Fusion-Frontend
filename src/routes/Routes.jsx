@@ -18,10 +18,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch(
-            "https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts"
-          ),
+        loader: () => fetch("http://localhost:5000/crafts"),
       },
       {
         path: "/crafts/:id",
@@ -31,17 +28,12 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${params.id}`
-          ),
+          fetch(`http://localhost:5000/crafts/${params.id}`),
       },
       {
         path: "/all-art-craft/",
         element: <AllArtCraft></AllArtCraft>,
-        loader: () =>
-          fetch(
-            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts`
-          ),
+        loader: () => fetch(`http://localhost:5000/crafts`),
       },
       {
         path: "/add-craft-item",
@@ -79,9 +71,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${params.id}`
-          ),
+          fetch(`http://localhost:5000/crafts/${params.id}`),
       },
     ],
   },

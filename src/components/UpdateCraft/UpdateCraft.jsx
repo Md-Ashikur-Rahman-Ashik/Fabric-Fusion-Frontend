@@ -55,7 +55,7 @@ const UpdateCraft = () => {
 
     // Send data to the server
     fetch(
-      `https://b9a10-server-side-md-ashikur-rahman-ashik.vercel.app/crafts/${_id}`,
+      `http://localhost:5000/craft/${_id}`,
       {
         method: "PUT",
         headers: {
@@ -67,7 +67,7 @@ const UpdateCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount) {
           Swal.fire({
             title: "Success!",
             text: "Craft Item Updated Successfully",
