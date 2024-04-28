@@ -36,7 +36,7 @@ const MyArtCraftList = () => {
       .then((data) => {
         setItem(data);
       });
-  }, [user]);
+  }, [user, item]);
 
   return (
     <div className="mx-10">
