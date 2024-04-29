@@ -1,7 +1,30 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllArtCraft = () => {
-  const allCrafts = useLoaderData();
+  const [loading, setLoading] = useState(true);
+  // const allCrafts = useLoaderData();
+  const [allCrafts, setAllCrafts] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/crafts`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllCrafts(data);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <span className="loading loading-bars loading-xs"></span>
+        <span className="loading loading-bars loading-sm"></span>
+        <span className="loading loading-bars loading-md"></span>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-4 md:mx-10">

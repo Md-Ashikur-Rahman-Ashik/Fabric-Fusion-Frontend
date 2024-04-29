@@ -4,9 +4,32 @@ import HomeCraft from "../HomeCraft/HomeCraft";
 import TutorialsFromExperts from "../TutorialsFromExperts/TutorialsFromExperts";
 import InspirationGallery from "../InspirationGallery/InspirationGallery";
 import { Fade } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  const homeCrafts = useLoaderData();
+  const [loading, setLoading] = useState(true);
+  // const homeCrafts = useLoaderData();
+  const [homeCrafts, setHomeCrafts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/crafts")
+      .then((res) => res.json())
+      .then((data) => {
+        setHomeCrafts(data);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <span className="loading loading-bars loading-xs"></span>
+        <span className="loading loading-bars loading-sm"></span>
+        <span className="loading loading-bars loading-md"></span>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
 
   return (
     <div>

@@ -10,6 +10,8 @@ const MyArtCraftList = () => {
   const [enable, setEnable] = useState(false);
   const [notEnable, setNotEnable] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+
   const handleEnable = () => {
     const selectBox = document.getElementById("box").value;
     if (selectBox === "Yes") {
@@ -35,8 +37,20 @@ const MyArtCraftList = () => {
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
+        setLoading(false);
       });
   }, [user, item]);
+
+  if (loading) {
+    return (
+      <div>
+        <span className="loading loading-bars loading-xs"></span>
+        <span className="loading loading-bars loading-sm"></span>
+        <span className="loading loading-bars loading-md"></span>
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-10">
