@@ -61,7 +61,7 @@ const AddCraftItem = () => {
   };
 
   return (
-    <div className="bg-pink-50 text-black p-10 md:p-24">
+    <div className="bg-pink-50 text-black rounded-xl mx-10 p-10 md:p-24">
       <h2 className="text-3xl font-extrabold text-pink-600 text-center">
         Add A Craft Item
       </h2>

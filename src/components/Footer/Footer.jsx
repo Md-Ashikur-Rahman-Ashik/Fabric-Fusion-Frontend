@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="footer mt-10 footer-center p-10 bg-pink-50 text-base-content rounded">
+    <div className="footer mt-10 footer-center p-10 bg-pink-50 text-base-content rounded">
       <div className="grid grid-flow-col gap-4">
-        <a className="link link-hover font-bold">Contact us at : admin@fabricfusion.com</a>
+        <a className="link link-hover font-bold">
+          Contact us at : admin@fabricfusion.com
+        </a>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
@@ -47,7 +49,7 @@ const Footer = () => {
           <span className="text-pink-600 font-bold">Fabric Fusion</span>
         </p>
       </aside>
-    </footer>
+    </div>
   );
 };
 
