@@ -33,7 +33,7 @@ const MyArtCraftList = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/craft/${user?.email}`)
+    fetch(`https://server-side-assignment-ten.vercel.app/craft/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

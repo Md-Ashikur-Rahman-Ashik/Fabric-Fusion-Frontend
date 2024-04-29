@@ -55,7 +55,7 @@ const UpdateCraft = () => {
     };
 
     // Send data to the server
-    fetch(`http://localhost:5000/craft/${_id}`, {
+    fetch(`https://server-side-assignment-ten.vercel.app/craft/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

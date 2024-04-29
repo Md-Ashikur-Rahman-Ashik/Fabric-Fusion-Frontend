@@ -7,7 +7,7 @@ const AllArtCraft = () => {
   const [allCrafts, setAllCrafts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/crafts`)
+    fetch(`https://server-side-assignment-ten.vercel.app/crafts`)
       .then((res) => res.json())
       .then((data) => {
         setAllCrafts(data);

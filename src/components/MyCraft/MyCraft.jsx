@@ -24,7 +24,7 @@ const MyCraft = ({ craft }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://server-side-assignment-ten.vercel.app/craft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

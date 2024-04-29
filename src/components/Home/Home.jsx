@@ -12,7 +12,7 @@ const Home = () => {
   const [homeCrafts, setHomeCrafts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/crafts")
+    fetch("https://server-side-assignment-ten.vercel.app/crafts")
       .then((res) => res.json())
       .then((data) => {
         setHomeCrafts(data);

@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`),
+          fetch(`https://server-side-assignment-ten.vercel.app/crafts/${params.id}`),
       },
       {
         path: "/all-art-craft/",
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`),
+          fetch(`https://server-side-assignment-ten.vercel.app/crafts/${params.id}`),
       },
     ],
   },
