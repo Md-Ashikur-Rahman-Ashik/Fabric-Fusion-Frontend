@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/subcategories")
+    fetch("https://server-side-assignment-ten.vercel.app/subcategories")
       .then((res) => res.json())
       .then((data) => {
         setSub(data);

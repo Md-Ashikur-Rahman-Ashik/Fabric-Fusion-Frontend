@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import HomeCraftDetails from "../components/HomeCraftDetails/HomeCraftDetails";
 import UpdateCraft from "../components/UpdateCraft/UpdateCraft";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import SubDetails from "../components/SubDetails/SubDetails";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,15 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://server-side-assignment-ten.vercel.app/crafts/${params.id}`),
+          fetch(
+            `https://server-side-assignment-ten.vercel.app/crafts/${params.id}`
+          ),
+      },
+      {
+        path: "/subcategory/:id",
+        element: <SubDetails></SubDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/subcategory/${params.id}`),
       },
       {
         path: "/all-art-craft/",
@@ -67,7 +76,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://server-side-assignment-ten.vercel.app/crafts/${params.id}`),
+          fetch(
+            `https://server-side-assignment-ten.vercel.app/crafts/${params.id}`
+          ),
       },
     ],
   },
