@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
         path: "/subcategory/:id",
         element: <SubDetails></SubDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/subcategory/${params.id}`),
+          fetch(`https://server-side-assignment-ten.vercel.app/subcategory/${params.id}`),
       },
       {
         path: "/all-art-craft/",
