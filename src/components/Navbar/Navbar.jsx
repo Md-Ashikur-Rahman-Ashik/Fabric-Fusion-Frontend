@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -130,11 +131,13 @@ const Navbar = () => {
         {user ? (
           <div className="flex gap-2 mb-2 mt-2">
             <img
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={user.displayName}
               className="rounded-full cursor-pointer"
-              title={user.displayName}
               src={user.photoURL}
               alt=""
             />
+            <Tooltip id="my-tooltip" />
             <Link
               className="btn font-bold text-pink-600 mb-2 mt-2"
               onClick={handleSignOut}

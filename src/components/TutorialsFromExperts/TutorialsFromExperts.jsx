@@ -1,11 +1,15 @@
+import { Fade } from "react-awesome-reveal";
+
 const TutorialsFromExperts = () => {
   return (
     <section className="py-12 mt-10 mx-4 md:mx-10 rounded-xl bg-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-pink-600 sm:text-4xl">
-            Explore Our Tutorials
-          </h2>
+          <Fade>
+            <h2 className="text-3xl font-extrabold text-pink-600 sm:text-4xl">
+              Explore Our Tutorials
+            </h2>
+          </Fade>
           <p className="mt-4 text-lg text-gray-600">
             Learn new skills and techniques with our step-by-step guides and
             tutorials.

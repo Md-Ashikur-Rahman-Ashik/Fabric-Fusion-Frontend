@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 const AddCraftItem = () => {
   const handleAddCraft = (event) => {
@@ -62,9 +63,11 @@ const AddCraftItem = () => {
 
   return (
     <div className="bg-pink-50 text-black rounded-xl mx-10 p-10 md:p-24">
-      <h2 className="text-3xl font-extrabold text-pink-600 text-center">
-        Add A Craft Item
-      </h2>
+      <Fade>
+        <h2 className="text-3xl font-extrabold text-pink-600 text-center">
+          Add A Craft Item
+        </h2>
+      </Fade>
       <form onSubmit={handleAddCraft}>
         {/* Form Name and Quantity Row */}
         <div className="md:flex flex-col items-center gap-4 mt-2">
