@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import SubCard from "../SubCard/SubCard";
 
 const SubDetails = () => {
   const subData = useLoaderData();
-  console.log(subData);
+  const { subcategoryBox } = subData;
 
   const [loading, setLoading] = useState(true);
   // const allCrafts = useLoaderData();
@@ -18,7 +19,10 @@ const SubDetails = () => {
       });
   }, []);
 
-  console.log(allCrafts);
+  const ourCraft = allCrafts.filter(
+    (craft) => craft.subcategoryBox === subcategoryBox
+  );
+//   console.log(ourCraft);
 
   if (loading) {
     return (
@@ -32,19 +36,10 @@ const SubDetails = () => {
   }
 
   return (
-    <div className="card  bg-base-100 shadow-xl">
-      <figure>
-        <img src="" alt="Album" />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title text-pink-600">{}</h2>
-        <p></p>
-        <div className="">
-          <Link to={`/crafts/`}>
-            <button className="btn bg-pink-100 w-full">View Details</button>
-          </Link>
-        </div>
-      </div>
+    <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2 mx-10">
+      {ourCraft.map((sub) => (
+        <SubCard key={sub._id} sub={sub}></SubCard>
+      ))}
     </div>
   );
 };
