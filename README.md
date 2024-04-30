@@ -1,8 +1,21 @@
-# React + Vite
+# Fabric Fusion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Fabric Fusion - your one-stop destination for all things related to Textile Arts!
 
-Currently, two official plugins are available:
+Visit the live website: [Fabric Fusion](https://fabric-fusion-assignment-ten.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features:
+
+- **Comprehensive Textile Arts Collection:** Explore a diverse range of textile arts subcategories, including Embroidery, Knitting & Crocheting, Quilting, Beadwork, Tie-Dyeing, and Macramé.
+- **Supplies Marketplace:** Shop for high-quality supplies and materials for your textile projects, from threads and yarns to beads and fabrics, all in one convenient place.
+- **Inspiration Gallery:** Get inspired by browsing our curated gallery of stunning textile artwork and creations, contributed by talented artisans and enthusiasts.
+- **Tutorial Section:** Learn new skills and techniques with our step-by-step tutorials and guides covering various textile arts disciplines, suitable for beginners and experienced crafters alike.
+- **Community Forum:** Join our vibrant community of textile arts lovers to share your creations, exchange ideas and tips, and connect with fellow enthusiasts from around the world.
+
+## Additional Information:
+
+- **npm Packages Used:**
+  - [React Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal): A React component library for easily adding reveal animations to your website elements.
+  - [React Tooltip](https://www.npmjs.com/package/react-tooltip): A lightweight and customizable tooltip component for React applications, perfect for providing additional information or context to users.
+
+Start your textile arts journey with Fabric Fusion today!
