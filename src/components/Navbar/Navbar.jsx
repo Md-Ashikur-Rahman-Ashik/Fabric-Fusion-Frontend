@@ -106,9 +106,9 @@ const Navbar = () => {
                     src={user.photoURL}
                     alt=""
                   />
-                  <Link className="btn" onClick={handleSignOut}>
+                  <span className="btn" onClick={handleSignOut}>
                     LogOut
-                  </Link>
+                  </span>
                 </div>
               ) : (
                 <Link to="/login" className="btn mb-2 mt-2">
@@ -136,12 +136,12 @@ const Navbar = () => {
               alt=""
             />
             <Tooltip id="my-tooltip" />
-            <Link
+            <span
               className="btn font-bold text-pink-600 mb-2 mt-2"
               onClick={handleSignOut}
             >
               LogOut
-            </Link>
+            </span>
           </div>
         ) : (
           <Link to="/login" className="btn font-bold text-pink-600 mb-2 mt-2">
@@ -149,7 +149,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <label className="flex w-1/6 justify-end cursor-pointer gap-2">
+      <div className="flex ml-20 cursor-pointer gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -182,7 +182,7 @@ const Navbar = () => {
         >
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
-      </label>
+      </div>
     </div>
   );
 };

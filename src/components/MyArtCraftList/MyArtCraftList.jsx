@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import MyCraft from "../MyCraft/MyCraft";
+import { Helmet } from "react-helmet";
 
 const MyArtCraftList = () => {
   const { user } = useContext(AuthContext);
@@ -54,6 +55,9 @@ const MyArtCraftList = () => {
 
   return (
     <div className="mx-10">
+      <Helmet>
+        <title>My Art & Craft List | Fabric Fusion</title>
+      </Helmet>
       <div className="flex w-full mb-4">
         <select
           className="select select-bordered font-bold text-pink-600"

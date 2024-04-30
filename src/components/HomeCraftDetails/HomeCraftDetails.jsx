@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const HomeCraftDetails = () => {
@@ -5,6 +6,10 @@ const HomeCraftDetails = () => {
 
   return (
     <div className="mx-10">
+      <Helmet>
+        <title>Craft | Fabric Fusion
+        </title>
+      </Helmet>
       <h3 className="text-center text-5xl font-bold text-pink-600">
         {homeCraft.name}
       </h3>

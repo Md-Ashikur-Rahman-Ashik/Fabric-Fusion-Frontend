@@ -6,6 +6,7 @@ import InspirationGallery from "../InspirationGallery/InspirationGallery";
 import { Fade } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 import Subcategories from "../Subcategories/Subcategories";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,9 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fabric Fusion | Home</title>
+      </Helmet>
       <Banner></Banner>
       <div className="mx-4 md:mx-10">
         <Fade>

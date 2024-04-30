@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -85,6 +86,9 @@ const UpdateCraft = () => {
 
   return (
     <div className="bg-pink-50 text-black p-10 md:p-24">
+      <Helmet>
+        <title>Update Craft | Fabric Fusion</title>
+      </Helmet>
       <h2 className="text-3xl font-extrabold text-pink-600 text-center">
         {name}
       </h2>

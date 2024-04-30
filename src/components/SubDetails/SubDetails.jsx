@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import SubCard from "../SubCard/SubCard";
+import { Helmet } from "react-helmet";
 
 const SubDetails = () => {
   const subData = useLoaderData();
@@ -37,6 +38,9 @@ const SubDetails = () => {
 
   return (
     <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2 mx-10">
+      <Helmet>
+        <title>Subcategory | Fabric Fusion</title>
+      </Helmet>
       {ourCraft.map((sub) => (
         <SubCard key={sub._id} sub={sub}></SubCard>
       ))}
